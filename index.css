@@ -1,0 +1,186 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Body with soft cute background */
+body {
+    background: linear-gradient(135deg, #fce4ec, #e3f2fd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🌸 Decorative flowers */
+body::before {
+    content: "🌸 🌼 🌷 🐰 🐻";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 22px;
+    opacity: 0.25;
+}
+
+body::after {
+    content: "🐱 🌺 🌸 🐼";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 22px;
+    opacity: 0.25;
+}
+
+/* Main card */
+.main {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1;
+}
+
+/* Heading */
+h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #444;
+    font-weight: 600;
+}
+
+/* Form */
+form {
+    margin-bottom: 20px;
+}
+
+form p {
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+label {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+/* Inputs */
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: 0.3s;
+    background: #fafafa;
+}
+
+input:focus {
+    border-color: #ff80ab;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(255, 128, 171, 0.3);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff80ab, #82b1ff);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table header */
+thead {
+    background: linear-gradient(135deg, #82b1ff, #ff80ab);
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Table rows */
+tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: 0.2s;
+}
+
+tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+tbody tr:hover {
+    background: #f1f7ff;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 480px) {
+    .main {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    /* Scroll table on small screen */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Reduce decoration on small screens */
+    body::before,
+    body::after {
+        font-size: 16px;
+        opacity: 0.15;
+    }
+}
